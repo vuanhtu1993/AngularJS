@@ -6,6 +6,14 @@ var myApp = angular.module('myModule',[]);
 //      $scope.message= 'AngularJS'
 //
 //  }
+
+// scope là một service của Angular để thực hiện cơ chế DataBinding
  myApp.controller('myController',function ($scope) {
-     $scope.message = "Vu Anh Tu"
+     var employee = {
+         FirstName : "Mark",
+         LastName : "Hasting",
+         Gender : "Male"
+     }
+     $scope.employee = employee;  //$scope.employee là để truyền ra view
+
  });
