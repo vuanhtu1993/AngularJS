@@ -20,6 +20,10 @@
             </li>
             <!--end foreach-->
         </ul>
+        <form ng-submit="todoList.addTodo()">
+            <input type="text" ng-model="todoList.todoText" placeholder="input new todo here">
+            <button type="submit" class="btn-primary">Add</button>
+        </form>
     </div>
 </body>
 </html>

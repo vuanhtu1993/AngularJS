@@ -6,5 +6,9 @@ angular.module('todoApp',[])
         {text:'JavaScript',done:false}
     ];
 
+    todoList.addTodo = function () {
+        todoList.todos.push({text:todoList.todoText, done:false});
+        todoList.todoText = '';
+    }
 
 })
