@@ -1,6 +1,7 @@
 <html ng-app="todoApp">
 <head>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="angular/angular.min.js"></script>
     <script src="angular/todoApp.js"></script>
 </head>
@@ -10,12 +11,14 @@
         <span>{{todoList.remaining()}} of {{todoList.todos.length}}</span>
         <a href="" ng-click="todoList.archive()">archive</a>
         <ul class="list-unstyled">
+            <!--foreach todoList.todos as todo-->
             <li ng-repeat="todo in todoList.todos">
                 <label class="checkbox">
                     <input type="checkbox" ng-model="todo.done">
                     <span class="done-{{todo.done}}">{{todo.text}}</span>
                 </label>
             </li>
+            <!--end foreach-->
         </ul>
     </div>
 </body>
