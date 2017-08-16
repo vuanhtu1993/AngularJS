@@ -1,0 +1,20 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="angular/angular.min.js"></script>
+    <script src="angular/scope.js"></script>
+</head>
+<body ng-app="scopeDemo">
+<!-- $scope là một đối tượng giao tiếp dữ liệu giưa controller và view, $scope chứa thông tin là các dữ liệu model,
+bao gồm các thuộc tính phương thức, trong controller, dữ liệu model có thể truy cập qua đối tượng $scope
+$scope  là một biến để truy xuất model-->
+    <div ng-controller="ScopeController">
+        <input type="text" ng-model="name">
+        <button ng-click="sayHello()">click me</button>
+        <div>
+            {{name}}
+        </div>
+    </div>
+
+</body>
+</html>
