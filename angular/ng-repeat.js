@@ -12,9 +12,9 @@ myApp.controller('repeatController',function ($scope) {
 });
 
 
-myApp.controller('nestedRepeatController',function ($scope) {
-
-    var countries = [
+myApp.controller('nestedRepeatController',function () {
+    var show_country = this;
+     show_country.countries = [
         {
             name:'UK',
             city:[
@@ -40,5 +40,5 @@ myApp.controller('nestedRepeatController',function ($scope) {
             ]
         }
     ];
-    $scope.countries = countries;
+
 });
