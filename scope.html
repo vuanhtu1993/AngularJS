@@ -8,9 +8,15 @@
 <!-- $scope là một đối tượng giao tiếp dữ liệu giưa controller và view, $scope chứa thông tin là các dữ liệu model,
 bao gồm các thuộc tính phương thức, trong controller, dữ liệu model có thể truy cập qua đối tượng $scope
 $scope  là một biến để truy xuất model-->
-    <div ng-controller="ScopeController">
+    <div ng-controller="classController">
         <input type="text" ng-model="name">
-        <button ng-click="sayHello()">click me</button>
+        <div>
+            {{name}}
+        </div>
+    </div>
+
+    <div ng-controller="schoolController">
+        <input type="text" ng-model="name">
         <div>
             {{name}}
         </div>

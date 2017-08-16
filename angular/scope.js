@@ -1,9 +1,9 @@
-angular.module('scopeDemo',[])
-.controller('ScopeController',function ($scope) {
-    $scope.name='Vu Anh Tu';
+var myApp = angular.module('scopeDemo',[]);
 
-    $scope.sayHello = function () {
-        $scope.name = 'Hello' + $scope.name;
-    }
-        .controller('')
+myApp.controller('classController',function ($scope) {
+    $scope.name = 'JavaSciprt';
 });
+myApp.controller('schoolController',function ($scope) {
+    $scope.name = 'Angular';
+});
+
