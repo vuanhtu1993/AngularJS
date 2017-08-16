@@ -10,3 +10,35 @@ myApp.controller('repeatController',function ($scope) {
     $scope.employees = employees; //employee mà $scope.employee để show ra màn hình, được gán bằng employee phía trên
 
 });
+
+
+myApp.controller('nestedRepeatController',function ($scope) {
+
+    var countries = [
+        {
+            name:'UK',
+            city:[
+                {name:'London'},
+                {name:'Chesea'},
+                {name:'ManU'}
+            ]
+        },
+        {
+            name:'US',
+            city:[
+                {name:'NewYork'},
+                {name:'Cam'},
+                {name:'Wasington'}
+            ]
+        },
+        {
+            name:'VN',
+            city:[
+                {name:'HN'},
+                {name:'HCM'},
+                {name:'DaNang'}
+            ]
+        }
+    ];
+    $scope.countries = countries;
+});
