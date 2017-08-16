@@ -8,7 +8,7 @@
 <!--Directive xây dụng các thẻ mở rọng cho HTML nhằm-->
 
 <div ng-controller="eventController as handleEvent" ng-init="">
-    {{handleEvent.technologys}}
+    {{handleEvent.technologies}}
     <table>
         <tr>
             <th>Name</th>
@@ -16,15 +16,14 @@
             <th>DisLike</th>
             <th>Action</th>
         </tr>
-        <tr ng-repeat="technology in handleEvent.technologys">
+        <tr ng-repeat="technology in handleEvent.technologies">
             <td>{{technology.name}}</td>
             <td>{{technology.like}}</td>
             <td>{{technology.dislike}}</td>
             <td>
-                <button>Like</button>
-                <button>Dislike</button>
+                <button  ng-click="handleEvent.increaseLike(technology)">Like</button>
+                <button  ng-click="handleEvent.increaseDislike(technology)">Dislike</button>
             </td>
-
         </tr>
     </table>
 </div>
