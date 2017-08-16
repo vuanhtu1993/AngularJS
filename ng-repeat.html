@@ -24,8 +24,16 @@
         </table>
     </div>
 
-    <div ng-controller="nestedRepeatController as show_country">
-        {{show_country.countries}}
+    <div ng-controller="nestedRepeatController as show_country" >
+        <!--{{show_country.countries}}-->
+        <ul >
+            <li ng-repeat="country in show_country.countries">
+                {{country.name}}
+                <ul>
+                    <li ng-repeat="city in country.city">{{city.name}}</li>
+                </ul>
+            </li>
+        </ul>
     </div>
 
 </body>
