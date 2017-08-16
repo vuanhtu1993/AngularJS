@@ -8,7 +8,25 @@
 <!--Directive xây dụng các thẻ mở rọng cho HTML nhằm-->
 
 <div ng-controller="eventController as handleEvent" ng-init="">
-    {{handleEvent.technology}}
+    {{handleEvent.technologys}}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Like</th>
+            <th>DisLike</th>
+            <th>Action</th>
+        </tr>
+        <tr ng-repeat="technology in handleEvent.technologys">
+            <td>{{technology.name}}</td>
+            <td>{{technology.like}}</td>
+            <td>{{technology.dislike}}</td>
+            <td>
+                <button>Like</button>
+                <button>Dislike</button>
+            </td>
+
+        </tr>
+    </table>
 </div>
 
 </body>
