@@ -2,11 +2,27 @@
 <head>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="angular/angular.min.js"></script>
-    <script src="angular/directive.js"></script>
+    <script src="angular/ng-repeat.js"></script>
 </head>
-<body >
-<!---->
-
+<body ng-app="repeatDemo">
+<!--hoạt động như một hàm foreach -->
+    <div ng-controller="repeatController">
+        {{employees}}
+        <table>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Gender</th>
+                <th>Salary</th>
+            </tr>
+            <tr ng-repeat="employee in employees">
+                <td>{{employee.firstName}}</td>
+                <td>{{employee.lastName}}</td>
+                <td>{{employee.gender}}</td>
+                <td>{{employee.salary}}</td>
+            </tr>
+        </table>
+    </div>
 
 </body>
 </html>
