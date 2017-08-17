@@ -9,6 +9,8 @@
 
 <div ng-controller="filterController as filter" ng-init="">
     <div >
+        show number of row
+        <input type="number" ng-model="showRow">
         <table class="table">
             <thead>
             <tr>
@@ -19,7 +21,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="employee in filter.employees|limitTo:3:1">
+            <tr ng-repeat="employee in filter.employees|limitTo:showRow">
                 <td>{{employee.name|uppercase}}</td>
                 <td>{{employee.birthday|date:"dd/MM/yyyy"}}</td>
                 <td>{{employee.salary|currency}}</td>
