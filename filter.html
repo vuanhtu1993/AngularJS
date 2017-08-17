@@ -4,11 +4,30 @@
     <script src="angular/angular.min.js"></script>
     <script src="angular/filter.js"></script>
 </head>
-<body ng-app="">
-<!--Directive xây dụng các thẻ mở rọng cho HTML nhằm-->
+<body ng-app="filterDemo">
+<!---->
 
-<div ng-controller="" ng-init="">
-
+<div ng-controller="filterController as filter" ng-init="">
+    <div >
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Birthday</th>
+                <th>Salary</th>
+                <th>Gender</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="employee in filter.employees|limitTo:3:1">
+                <td>{{employee.name|uppercase}}</td>
+                <td>{{employee.birthday|date:"dd/MM/yyyy"}}</td>
+                <td>{{employee.salary|currency}}</td>
+                <td>{{employee.gender|uppercase}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
 </div>
 
