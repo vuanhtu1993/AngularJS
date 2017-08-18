@@ -18,6 +18,8 @@
                 <th>Birthday</th>
                 <th>Salary</th>
                 <th>Gender</th>
+                <th>Status</th>
+
             </tr>
             </thead>
             <tbody>
@@ -26,6 +28,7 @@
                 <td>{{employee.birthday|date:"dd/MM/yyyy"}}</td>
                 <td>{{employee.salary|currency}}</td>
                 <td>{{employee.gender|uppercase}}</td>
+                <td>{{employee.status|status}}</td>
             </tr>
             </tbody>
         </table>
