@@ -9,6 +9,7 @@ myApp.controller('filterController',function () {
         {name:'Mark', birthday:new Date('6/10/1993'), salary:'8000',gender:'male',status:false},
         {name:'May', birthday:new Date('5/10/1993'), salary:'8000',gender:'female',status: true}
     ];
+    filter.search = "";
     filter.reverse = false;
     filter.softColumn = 'name';
     filter.softData=function (column) {

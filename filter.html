@@ -9,7 +9,7 @@
 
 <div ng-controller="filterController as filter" ng-init="">
     <div >
-
+        <input type="text" ng-model="search" placeholder="Search">
         <table class="table">
             <thead>
             <tr>
@@ -21,7 +21,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="employee in filter.employees|orderBy:softColumn:filter.reverse">
+            <tr ng-repeat="employee in filter.employees|orderBy:softColumn:filter.reverse|filter:search">
                 <td>{{employee.name|uppercase}}</td>
                 <td>{{employee.birthday|date:"dd/MM/yyyy"}}</td>
                 <td>{{employee.salary|currency}}</td>
