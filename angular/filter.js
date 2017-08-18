@@ -7,8 +7,17 @@ myApp.controller('filterController',function () {
         {name:'Ruby', birthday:new Date('6/8/1993'), salary:'3000',gender:'female',status:true},
         {name:'Shapia', birthday:new Date('6/9/1993'), salary:'6000',gender:'female',status:true},
         {name:'Mark', birthday:new Date('6/10/1993'), salary:'8000',gender:'male',status:false},
-        {name:'May', birthday:new Date('5/10/1993'), salary:'8000',gender:'female',status:true}
-    ]
+        {name:'May', birthday:new Date('5/10/1993'), salary:'8000',gender:'female',status: true}
+    ];
+    filter.reverse = false;
+    filter.softColumn = 'name';
+    filter.softData=function (column) {
+        if(filter.softColumn == column){
+            filter.reverse = !filter.reverse;
+        }
+        else filter.reverse = false;
+        filter.softColumn = column;
+    }
 });
 myApp.filter('status',function () {
     return function (input) {
