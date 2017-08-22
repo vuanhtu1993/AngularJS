@@ -19,7 +19,8 @@ myApp.controller('filterController',function () {
         }
         else filter.reverse = false;
         filter.softColumn = column;
-    }
+    };
+    filter.view = "filter_view.html";
 });
 myApp.filter('status',function () {
     return function (input) {

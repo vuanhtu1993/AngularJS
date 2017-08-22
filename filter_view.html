@@ -1,0 +1,22 @@
+<table class="table">
+            <thead>
+            <tr>
+                <td ng-click="filter.softData('name')">Name</td>
+                <td ng-click="filter.softData('birthday')">Birthday</td>
+                <td ng-hide="hide" ng-click="filter.softData('salary')">Salary</td>
+                <td ng-show="hide" ng-click="filter.softData('salary')">Salary</td>
+                <td >Gender</td>
+                <td >Status</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="employee in filter.employees|orderBy:softColumn:filter.reverse|filter:search">
+                <td>{{employee.name|uppercase}}</td>
+                <td>{{employee.birthday|date:"dd/MM/yyyy"}}</td>
+                <td ng-hide="hide">{{employee.salary|currency}}</td>
+                <td ng-show="hide">xxxxxxxx</td>
+                <td>{{employee.gender|uppercase}}</td>
+                <td>{{employee.status|status}}</td>
+            </tr>
+            </tbody>
+        </table>
